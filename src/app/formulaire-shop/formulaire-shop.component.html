@@ -1,7 +1,17 @@
+ <form  (ngSubmit)="onSubmit()">
+  <label for="name">Name: </label>
+  <input id="name" type="text" [formControl]="name">
+  
+  <label for="name">Surname: </label>
+  <input id="surname" type="text" [formControl]="surname">
+  
+  <label for="name">Date de naissance: </label>
+  <input  type="date" [formControl]="age">
+  
+  <button>Envoyer</button>
+ </form>
+ <button (click)="update()">Update</button>
 
-  <ul>
-    <li><a routerLink="/login-component" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a></li>
-  </ul>
-
-<!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>
+<br>
+Bonjour {{name.value}} 
+votre nom est :<b>{{name.value}}</b>  et votre Prenom : <b>{{surname.value}}</b> votre Date de naissance est :<b>{{age.value}}</b> 
